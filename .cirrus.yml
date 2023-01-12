@@ -9,7 +9,7 @@ env:
   VT_PATH: vendor/$OEM/$DEVICE
   KT_LINK: https://github.com/mi-sdm439/android_kernel_xiaomi_sdm439.git -b a12/main
   KT_PATH: kernel/$OEM/$DEVICE
-  LUNCH_COMBO: arrow_mi439-userdebug
+  LUNCH_COMBO: awaken_Mi439-userdebug
   TARGET: bacon
   OUTPUT: awaken*.zip
 
@@ -24,7 +24,7 @@ env:
 
 task:
   name: "Arrowos Build"
-  timeout_in: 4h
+  timeout_in: 6h
   container:
     image: apon77/aosp:cirrus
     cpu: 8
