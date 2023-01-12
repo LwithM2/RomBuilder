@@ -1,20 +1,17 @@
 env:
-  MANIFEST: https://github.com/ArrowOS/android_manifest.git
-  MANIFEST_BRANCH: arrow-13.0
-  DEVICE: mi439
+  MANIFEST: https://github.com/Project-Awaken/android_manifest.git
+  MANIFEST_BRANCH: 12.1
+  DEVICE: Mi439
   OEM: xiaomi
-  DT_LINK: https://github.com/mi-sdm439/android_device_xiaomi_mi439.git -b arrow-13.0
+  DT_LINK: https://github.com/Mi-Thorium/android_device_xiaomi_Mi439.git -b a12/rom/awaken
   DT_PATH: device/$OEM/$DEVICE
   VT_LINK: https://github.com/Mi-Thorium/proprietary_vendor_xiaomi_Mi439.git -b a11/master
   VT_PATH: vendor/$OEM/$DEVICE
-  VT_CO_PATH: vendor/xiaomi/mithorium-common
-  KT_LINK: https://github.com/ArrowOS-Mi439/android_kernel_xiaomi_sdm439.git -b arrow-13.0
+  KT_LINK: https://github.com/mi-sdm439/android_kernel_xiaomi_sdm439.git -b a12/main
   KT_PATH: kernel/$OEM/$DEVICE
-  CO_LINK: https://github.com/ArrowOS-Mi439/android_device_xiaomi_mithorium-common.git -b arrow-13.0
-  CO_PATH: device/xiaomi/mithorium-common
   LUNCH_COMBO: arrow_mi439-userdebug
   TARGET: bacon
-  OUTPUT: Arrow*.zip
+  OUTPUT: awaken*.zip
 
   # Not Recommended to Change
   SYNC_PATH: $HOME/work # Do NOT use "~". Use $HOME instead.
