@@ -18,7 +18,7 @@ git clone --depth=1 $VT_LINK $VT_PATH || { echo "ERROR: Failed to Clone the Devi
 git clone --depth=1 $KT_LINK $KT_PATH || { echo "ERROR: Failed to Clone the Device Trees!" && exit 1; }
 
 # Custom
-git clone --depth=1 https://github.com/Mi-Thorium/android_device_xiaomi_mithorium-common.git device/xiaomi/mithorium-common
+git clone --depth=1 https://github.com/Mi-Thorium/android_device_xiaomi_mithorium-common.git -b a12/rom/awaken device/xiaomi/mithorium-common
 git clone --depth=1 https://github.com/Mi-Thorium/proprietary_vendor_xiaomi_mithorium-common.git -b a12/master vendor/xiaomi/mithorium-common
 
 # Exit
