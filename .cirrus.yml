@@ -1,7 +1,7 @@
 env:
   MANIFEST: https://github.com/ArrowOS/android_manifest.git
   MANIFEST_BRANCH: arrow-13.0
-  DEVICE: mi439
+  DEVICE: Mi439
   OEM: xiaomi
   DT_LINK: https://github.com/ArrowOS-Mi439/android_device_xiaomi_Mi439.git -b arrow-13.0
   DT_PATH: device/$OEM/$DEVICE
