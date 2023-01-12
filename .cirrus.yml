@@ -1,17 +1,17 @@
 env:
-  MANIFEST: https://github.com/crdroidandroid/android.git
-  MANIFEST_BRANCH: 13.0
-  DEVICE: spes
+  MANIFEST: https://github.com/ArrowOS/android_manifest.git
+  MANIFEST_BRANCH: arrow-13.0
+  DEVICE: mi439
   OEM: xiaomi
-  DT_LINK: https://github.com/sakshiagrwal/android_device_xiaomi_spes.git -b jb13.0
+  DT_LINK: https://github.com/ArrowOS-Mi439/android_device_xiaomi_Mi439.git -b arrow-13.0
   DT_PATH: device/$OEM/$DEVICE
-  VT_LINK: https://github.com/sakshiagrwal/android_vendor_xiaomi_spes.git -b jb13.0
+  VT_LINK: https://github.com/Mi-Thorium/proprietary_vendor_xiaomi_Mi439.git -b a11/master
   VT_PATH: vendor/$OEM/$DEVICE
-  KT_LINK: https://github.com/sakshiagrwal/android_kernel_xiaomi_spes.git -b jb13.0
+  KT_LINK: https://github.com/ArrowOS-Mi439/android_kernel_xiaomi_sdm439.git -b arrow-13.0
   KT_PATH: kernel/$OEM/$DEVICE
-  LUNCH_COMBO: lineage_spes-user
+  LUNCH_COMBO: arrow_Mi439-userdebug
   TARGET: bacon
-  OUTPUT: crDroidAndroid*.zip
+  OUTPUT: ArrowOS*.zip
 
   # Not Recommended to Change
   SYNC_PATH: $HOME/work # Do NOT use "~". Use $HOME instead.
@@ -23,12 +23,12 @@ env:
   CIRRUS_SHELL: bash
 
 task:
-  name: "crDroid Build"
-  timeout_in: 2h
+  name: "Arrowos Build"
+  timeout_in: 4h
   container:
     image: apon77/aosp:cirrus
     cpu: 8
-    memory: 32G
+    memory: 16G
 
   Storage_Checker:
     - df -h
