@@ -46,7 +46,7 @@ fi
 sudo free -m
 sudo dd if=/dev/zero of=/var/swap bs=1024 count=12562912
 sudo mkswap /var/swap
-sudo chmod -R 0600 /var/swap
+sudo chmod 600 swap
 sudo swapon /var/swap
 source build/envsetup.sh
 export USE_GAPPS=true
