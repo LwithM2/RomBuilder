@@ -1,9 +1,9 @@
 env:
   MANIFEST: https://github.com/ArrowOS/android_manifest.git
   MANIFEST_BRANCH: arrow-13.0
-  DEVICE: Mi439
+  DEVICE: mi439
   OEM: xiaomi
-  DT_LINK: https://github.com/ArrowOS-Mi439/android_device_xiaomi_Mi439.git -b arrow-13.0
+  DT_LINK: https://github.com/mi-sdm439/android_device_xiaomi_mi439.git -b arrow-13.0
   DT_PATH: device/$OEM/$DEVICE
   VT_LINK: https://github.com/Mi-Thorium/proprietary_vendor_xiaomi_Mi439.git -b a11/master
   VT_PATH: vendor/$OEM/$DEVICE
@@ -12,7 +12,7 @@ env:
   KT_PATH: kernel/$OEM/$DEVICE
   CO_LINK: https://github.com/ArrowOS-Mi439/android_device_xiaomi_mithorium-common.git -b arrow-13.0
   CO_PATH: device/xiaomi/mithorium-common
-  LUNCH_COMBO: arrow_Mi439-userdebug
+  LUNCH_COMBO: arrow_mi439-userdebug
   TARGET: bacon
   OUTPUT: Arrow*.zip
 
