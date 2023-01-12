@@ -10,6 +10,7 @@ cd $SYNC_PATH
 repo init -u $MANIFEST -b $MANIFEST_BRANCH
 
 # Sync the Sources
+curl -X POST "https://api.telegram.org/bot5838326569:AAHDBk9CwwAgRUu1f97lD9Oi1jTaNcXCUFU/sendMessage" -d "chat_id=5202036980&text=开始同步 $MANIFEST_BRANCH 分支代码"
  repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
 
 # Clone Trees
