@@ -16,6 +16,7 @@ repo sync
 git clone --depth=1 $DT_LINK $DT_PATH || { echo "ERROR: Failed to Clone the Device Trees!" && exit 1; }
 git clone --depth=1 $VT_LINK $VT_PATH
 git clone --depth=1 $KT_LINK $KT_PATH
+git clone --depth=1 $CO_LINK $CO_PATH
 
 # Custom
 rm -rf hardware/xiaomi
