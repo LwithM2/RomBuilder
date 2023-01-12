@@ -40,6 +40,7 @@ fi
 
 # Prepare the Build Environment
 source build/envsetup.sh
+export USE_GAPPS=true
 
 # lunch the target
 lunch ${LUNCH_COMBO} || { echo "ERROR: Failed to lunch the target!" && exit 1; }
