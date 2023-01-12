@@ -1,5 +1,33 @@
 #!/bin/bash
 
+# A Function to Send Posts to Telegram
+telegram_message() {
+	curl -s -X POST "https://api.telegram.org/bot5838326569:AAHDBk9CwwAgRUu1f97lD9Oi1jTaNcXCUFU/sendMessage" \
+	-d chat_id="5202036980" \
+	-d parse_mode="HTML" \
+	-d text="$1"
+}
+
+# Send the Telegram Message
+
+echo -e \
+"
+🤖 ROM build CI
+
+✔️ The Build has been Triggered!
+
+📱 Device: "${DEVICE}"
+🖥 Build System: "${MANIFEST_BRANCH}"
+🧑🏼‍💻 MANIFEST: "${MANIFEST}"
+🌲 Logs: <a href=\"https://cirrus-ci.com/build/${CIRRUS_BUILD_ID}\">Here</a>
+" > tg.html
+
+TG_TEXT=$(< tg.html)
+
+telegram_message "${TG_TEXT}"
+echo " "
+
+
 # Change to the Source Directory
 cd $SYNC_PATH
 
