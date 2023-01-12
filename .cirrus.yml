@@ -7,6 +7,7 @@ env:
   DT_PATH: device/$OEM/$DEVICE
   VT_LINK: https://github.com/Mi-Thorium/proprietary_vendor_xiaomi_Mi439.git -b a11/master
   VT_PATH: vendor/$OEM/$DEVICE
+  VT_CO_PATH: vendor/xiaomi/mithorium-common
   KT_LINK: https://github.com/ArrowOS-Mi439/android_kernel_xiaomi_sdm439.git -b arrow-13.0
   KT_PATH: kernel/$OEM/$DEVICE
   CO_LINK: https://github.com/ArrowOS-Mi439/android_device_xiaomi_mithorium-common.git -b arrow-13.0
