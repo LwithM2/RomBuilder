@@ -28,7 +28,7 @@ task:
   container:
     image: apon77/aosp:cirrus
     cpu: 8
-    memory: 16G
+    memory: 32G
 
   Storage_Checker:
     - df -h
