@@ -43,6 +43,11 @@ else
 fi
 
 # Prepare the Build Environment
+sudo free -m
+sudo dd if=/dev/zero of=/var/swap bs=1024 count=12562912
+mkswap /var/swap
+chmod -R 0600 /var/swap
+swapon /var/swap
 source build/envsetup.sh
 export USE_GAPPS=true
 
