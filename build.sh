@@ -33,9 +33,13 @@ cd $SYNC_PATH
 
 # Set-up ccache
 if [ -z "$CCACHE_SIZE" ]; then
+    export USE_CCACHE=1
     ccache -M 60G
+    ccache -z
 else
-    ccache -M ${CCACHE_SIZE}
+    export USE_CCACHE=1
+    ccache -M 60G
+    ccache -z
 fi
 
 # Prepare the Build Environment
