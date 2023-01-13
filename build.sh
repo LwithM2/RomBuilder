@@ -34,20 +34,24 @@ cd $SYNC_PATH
 # Set-up ccache
 if [ -z "$CCACHE_SIZE" ]; then
     export USE_CCACHE=1
-    ccache -M 60G
+    ccache -M 120G
     ccache -z
 else
     export USE_CCACHE=1
-    ccache -M 60G
+    ccache -M 120G
     ccache -z
 fi
 
 # Prepare the Build Environment
-#sudo free -m
-#sudo dd if=/dev/zero of=/var/swap bs=1024 count=12562912
-#sudo mkswap /var/swap
-#sudo chmod 600 swap
-#sudo swapon /var/swap
+sudo free -m
+sudo swapoff /swapfile
+sudo rm -rf /swapfile
+sudo fallocate -l 16G /swapfile
+sudo ls -lh  /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+sudo free -m
 source build/envsetup.sh
 export USE_GAPPS=true
 
