@@ -28,8 +28,8 @@ task:
   timeout_in: 6h
   container:
     image: apon77/aosp:cirrus
-    cpu: 10
-    memory: 40G
+    cpu: 8
+    memory: 32G
 
   Storage_Checker:
     - df -h
