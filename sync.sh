@@ -21,6 +21,9 @@ git clone --depth=1 $KT_LINK $KT_PATH || { echo "ERROR: Failed to Clone the Devi
 # Custom
 git clone --depth=1 https://github.com/Nem1xx/android_device_xiaomi_mithorium-common.git -b elixir_a13 device/xiaomi/mithorium-common
 git clone --depth=1 https://github.com/Mi-Thorium/proprietary_vendor_xiaomi_mithorium-common.git -b a12/master vendor/xiaomi/mithorium-common
+git clone --depth=1 https://github.com/Mi-Thorium/android_hardware_mithorium-4.9.git -b lineage-19.1-k4.9 hardware/mithorium-4.9
+git clone --depth=1 https://github.com/LineageOS/android_vendor_qcom_opensource_libfmjni.git -b lineage-18.1 vendor/qcom/opensource/libfmjni
+git clone --depth=1 https://github.com/mi-sdm439/android_packages_apps_FMRadio.git -b lineage-18.1 packages/apps/FMRadio
 
 # Exit
 exit 0
