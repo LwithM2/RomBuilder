@@ -24,7 +24,7 @@ env:
   CIRRUS_SHELL: bash
 
 task:
-  name: "Arrowos Build"
+  name: "Project Awaken Build"
   timeout_in: 6h
   container:
     image: apon77/aosp:cirrus
