@@ -3,7 +3,7 @@ env:
   MANIFEST_BRANCH: 12.1
   DEVICE: Mi439
   OEM: xiaomi
-  DT_LINK: https://github.com/Mi-Thorium/android_device_xiaomi_Mi439.git -b a12/rom/awaken
+  DT_LINK: https://github.com/lanmiemie/android_device_xiaomi_Mi439.git -b a12/rom/awaken
   DT_PATH: device/$OEM/$DEVICE
   VT_LINK: https://github.com/Mi-Thorium/proprietary_vendor_xiaomi_Mi439.git -b a11/master
   VT_PATH: vendor/$OEM/$DEVICE
