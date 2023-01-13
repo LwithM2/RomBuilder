@@ -42,16 +42,26 @@ else
     ccache -z
 fi
 
+# Set-up Swap
+echo "Memory and swap:"
+free -h
+echo
+swapon --show
+echo
+export SWAP_FILE=$(swapon --show=NAME | tail -n 1)
+sudo swapoff $SWAP_FILE
+sudo rm $SWAP_FILE
+sudo fallocate -l 12G $SWAP_FILE
+sudo chmod 600 $SWAP_FILE
+sudo mkswap $SWAP_FILE
+sudo swapon $SWAP_FILE
+echo "Memory and swap:"
+free -h
+echo
+swapon --show
+echo
+
 # Prepare the Build Environment
-sudo free -m
-sudo swapoff /swapfile
-sudo rm -rf /swapfile
-sudo fallocate -l 16G /swapfile
-sudo ls -lh  /swapfile
-sudo chmod 600 /swapfile
-sudo mkswap /swapfile
-sudo swapon /swapfile
-sudo free -m
 source build/envsetup.sh
 export USE_GAPPS=true
 
