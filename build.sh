@@ -34,11 +34,11 @@ cd $SYNC_PATH
 # Set-up ccache
 if [ -z "$CCACHE_SIZE" ]; then
     export USE_CCACHE=1
-    ccache -M 120G
+    ccache -M 60G
     ccache -z
 else
     export USE_CCACHE=1
-    ccache -M 120G
+    ccache -M 60G
     ccache -z
 fi
 
@@ -51,7 +51,7 @@ echo
 export SWAP_FILE=$(swapon --show=NAME | tail -n 1)
 sudo swapoff $SWAP_FILE
 sudo rm $SWAP_FILE
-sudo fallocate -l 12G $SWAP_FILE
+sudo fallocate -l 64G $SWAP_FILE
 sudo chmod 600 $SWAP_FILE
 sudo mkswap $SWAP_FILE
 sudo swapon $SWAP_FILE
