@@ -43,23 +43,12 @@ else
 fi
 
 # Set-up Swap
-echo "Memory and swap:"
-free -h
-echo
-swapon --show
-echo
-export SWAP_FILE=$(swapon --show=NAME | tail -n 1)
-sudo swapoff $SWAP_FILE
-sudo rm $SWAP_FILE
-sudo fallocate -l 64G $SWAP_FILE
-sudo chmod 600 $SWAP_FILE
-sudo mkswap $SWAP_FILE
-sudo swapon $SWAP_FILE
-echo "Memory and swap:"
-free -h
-echo
-swapon --show
-echo
+sudo fallocate -l 16G /swapfile
+sudo ls -lh  /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+sudo free -m
 
 # Prepare the Build Environment
 source build/envsetup.sh
