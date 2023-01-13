@@ -7,7 +7,7 @@ env:
   DT_PATH: device/$OEM/$DEVICE
   VT_LINK: https://github.com/Mi-Thorium/proprietary_vendor_xiaomi_Mi439.git -b a11/master
   VT_PATH: vendor/$OEM/$DEVICE
-  KT_LINK: https://github.com/mi-sdm439/android_kernel_xiaomi_sdm439.git -b a12/main
+  KT_LINK: https://github.com/mi-sdm439/android_kernel_xiaomi_sdm439.git -b a13/main
   KT_PATH: kernel/xiaomi/sdm439
   #KT_PATH: kernel/$OEM/$DEVICE
   LUNCH_COMBO: aosp_Mi439-userdebug
