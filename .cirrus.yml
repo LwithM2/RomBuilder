@@ -1,18 +1,18 @@
 env:
-  MANIFEST: https://github.com/Project-Awaken/android_manifest.git
-  MANIFEST_BRANCH: 12.1
+  MANIFEST: https://github.com/Project-Elixir/manifest.git
+  MANIFEST_BRANCH: Tiramisu
   DEVICE: Mi439
   OEM: xiaomi
-  DT_LINK: https://github.com/lanmiemie/android_device_xiaomi_Mi439.git -b a12/rom/awaken
+  DT_LINK: https://github.com/Nem1xx/android_device_xiaomi_Mi439.git -b elixir_a13
   DT_PATH: device/$OEM/$DEVICE
   VT_LINK: https://github.com/Mi-Thorium/proprietary_vendor_xiaomi_Mi439.git -b a11/master
   VT_PATH: vendor/$OEM/$DEVICE
   KT_LINK: https://github.com/mi-sdm439/android_kernel_xiaomi_sdm439.git -b a12/main
   KT_PATH: kernel/xiaomi/sdm439
   #KT_PATH: kernel/$OEM/$DEVICE
-  LUNCH_COMBO: awaken_Mi439-userdebug
+  LUNCH_COMBO: aosp_Mi439-userdebug
   TARGET: bacon
-  OUTPUT: Awaken*.zip
+  OUTPUT: ProjectElixir*.zip
 
   # Not Recommended to Change
   SYNC_PATH: $HOME/work # Do NOT use "~". Use $HOME instead.
@@ -24,7 +24,7 @@ env:
   CIRRUS_SHELL: bash
 
 task:
-  name: "Project Awaken Build"
+  name: "Project Elixir Build"
   timeout_in: 6h
   container:
     image: apon77/aosp:cirrus
