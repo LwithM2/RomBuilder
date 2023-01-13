@@ -12,7 +12,7 @@ env:
   #KT_PATH: kernel/$OEM/$DEVICE
   LUNCH_COMBO: awaken_Mi439-userdebug
   TARGET: bacon
-  OUTPUT: waken*.zip
+  OUTPUT: Awaken*.zip
 
   # Not Recommended to Change
   SYNC_PATH: $HOME/work # Do NOT use "~". Use $HOME instead.
