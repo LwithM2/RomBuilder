@@ -4,10 +4,10 @@ ls
 
 
 # Make the Directory if it doesn't exist
-mkdir -p ~/project/work
+mkdir -p work
 
 # Change to the Source Directory
-cd ~/project/work
+cd work
 
 # Init Repo
 repo init -u $MANIFEST -b $MANIFEST_BRANCH
