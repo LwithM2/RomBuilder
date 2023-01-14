@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Change to the Source Directory
-cd $SYNC_PATH
+cd ~/project/work
 
 # Display a message
 echo "============================"
