@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Change to the Source Directory
-cd ~/project/work
+cd workspace
 
 # Display a message
 echo "============================"
