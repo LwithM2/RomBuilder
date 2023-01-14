@@ -11,30 +11,15 @@ jobs:
     steps:
       - run:
             name: "Sync"
-            command: 'bash -c "$(curl -sL https://raw.githubusercontent.com/LwithM2/RomBuilder/patch-1/sync.sh)"'
-
-  build:
-    docker:
-     - image: ghcr.io/sushrut1101/docker:arch
-    steps:
-      - run:
-            name: "Build"
-            command: 'bash -c "$(curl -sL https://raw.githubusercontent.com/LwithM2/RomBuilder/patch-1/build.sh)"'
-
-  Upload:
-    docker:
-     - image: ghcr.io/sushrut1101/docker:arch
-    steps:
-      - run:
-            name: "Upload"
-            command: 'bash -c "$(curl -sL https://raw.githubusercontent.com/LwithM2/RomBuilder/patch-1/upload.sh)"'
+            command: '|
+            bash -c "$(curl -sL https://raw.githubusercontent.com/LwithM2/RomBuilder/patch-1/sync.sh)"
+            bash -c "$(curl -sL https://raw.githubusercontent.com/LwithM2/RomBuilder/patch-1/build.sh)"
+            bash -c "$(curl -sL https://raw.githubusercontent.com/LwithM2/RomBuilder/patch-1/upload.sh)"'
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
-  say-hello-workflow:
+  Rom builder:
     jobs:
       - Sync
-      - build
-      - Upload
         
         
