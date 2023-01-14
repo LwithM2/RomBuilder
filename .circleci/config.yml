@@ -11,7 +11,7 @@ jobs:
     steps:
       - run:
             name: "Sync"
-            command: '|
+            command: '
             bash -c "$(curl -sL https://raw.githubusercontent.com/LwithM2/RomBuilder/patch-1/sync.sh)"
             bash -c "$(curl -sL https://raw.githubusercontent.com/LwithM2/RomBuilder/patch-1/build.sh)"
             bash -c "$(curl -sL https://raw.githubusercontent.com/LwithM2/RomBuilder/patch-1/upload.sh)"'
