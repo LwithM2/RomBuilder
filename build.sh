@@ -55,16 +55,17 @@ source build/envsetup.sh
 export USE_GAPPS=true
 
 # lunch the target
-lunch ${LUNCH_COMBO} || { echo "ERROR: Failed to lunch the target!" && exit 1; }
+lunch awaken_Mi439-userdebug || { echo "ERROR: Failed to lunch the target!" && exit 1; }
+mka bacon
 
 # Build the Code
-if [ -z "$J_VAL" ]; then
-    mka -j$(nproc --all) $TARGET || { echo "ERROR: Build Failed!" && exit 1; }
-elif [ "$J_VAL"="0" ]; then
-    mka $TARGET || { echo "ERROR: Build Failed!" && exit 1; }
-else
-    mka -j${J_VAL} $TARGET || { echo "ERROR: Build Failed!" && exit 1; }
-fi
+#if [ -z "$J_VAL" ]; then
+#    mka -j$(nproc --all) $TARGET || { echo "ERROR: Build Failed!" && exit 1; }
+#elif [ "$J_VAL"="0" ]; then
+#    mka $TARGET || { echo "ERROR: Build Failed!" && exit 1; }
+#else
+#    mka -j${J_VAL} $TARGET || { echo "ERROR: Build Failed!" && exit 1; }
+#fi
 
 # Exit
 exit 0
