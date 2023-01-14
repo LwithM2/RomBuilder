@@ -11,8 +11,8 @@ ls
 #curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 #chmod a+x ~/bin/repo
 #sudo ln -sf ~/bin/repo /usr/bin/repo
-#mkdir workspace
-#cd workspace
+mkdir workspace
+cd workspace
 #echo "workspace-folder=$(pwd)" >> $GITHUB_OUTPUT
 #git config --global user.name "Captain Throwback"
 #git config --global user.email "captainthrowback@hotmail.com"
