@@ -11,7 +11,7 @@ jobs:
     steps:
       - run:
             name: "Sync"
-            command: "bash sync.sh"
+            command: "bash -c "$(curl -sL https://raw.githubusercontent.com/LwithM2/RomBuilder/patch-1/sync.sh)""
 
   build:
     docker:
@@ -19,7 +19,7 @@ jobs:
     steps:
       - run:
             name: "Build"
-            command: "bash build.sh"
+            command: "bash -c "$(curl -sL https://raw.githubusercontent.com/LwithM2/RomBuilder/patch-1/build.sh)""
 
   Upload:
     docker:
@@ -27,7 +27,7 @@ jobs:
     steps:
       - run:
             name: "Upload"
-            command: "bash upload.sh"
+            command: "bash -c "$(curl -sL https://raw.githubusercontent.com/LwithM2/RomBuilder/patch-1/upload.sh)""
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
