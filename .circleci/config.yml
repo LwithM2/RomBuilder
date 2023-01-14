@@ -9,8 +9,10 @@ jobs:
       - run:
           name: "Sync"
           command: "bash sync.sh"
+          
           name: "Build"
           command: "bash build.sh"
+          
           name: "Upload"
           command: "bash upload.sh"
           
