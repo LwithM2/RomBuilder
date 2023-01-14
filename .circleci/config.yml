@@ -31,6 +31,8 @@ jobs:
 workflows:
   say-hello-workflow:
     jobs:
-      - say-hello
+      - Sync
+      - build
+      - Upload
         
         
