@@ -10,9 +10,13 @@ jobs:
           name: "Sync"
           command: "bash sync.sh"
           
+    steps:
+      - run:
           name: "Build"
           command: "bash build.sh"
           
+    steps:
+      - run:
           name: "Upload"
           command: "bash upload.sh"
           
