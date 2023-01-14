@@ -29,7 +29,7 @@ echo " "
 
 
 # Change to the Source Directory
-cd ~/project/work
+cd worksapce
 
 # Set-up ccache
 if [ -z "$CCACHE_SIZE" ]; then
