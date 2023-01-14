@@ -29,7 +29,7 @@ echo " "
 
 
 # Change to the Source Directory
-cd $SYNC_PATH
+cd ~/project/work
 
 # Set-up ccache
 if [ -z "$CCACHE_SIZE" ]; then
