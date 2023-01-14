@@ -8,6 +8,7 @@ jobs:
   Sync:
     docker:
      - image: apon77/aosp:cirrus
+    resource_class: xlarge
     steps:
       - run:
             name: "Sync"
