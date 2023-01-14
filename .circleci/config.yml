@@ -2,19 +2,25 @@
 version: 2.1
 
 jobs:
-   build:
+  Sync:
     docker:
      - image: apon77/aosp:cirrus
     steps:
       - run:
             name: "Sync"
             command: "bash sync.sh"
-          
+jobs:
+  build:
+    docker:
+     - image: apon77/aosp:cirrus
     steps:
       - run:
             name: "Build"
             command: "bash build.sh"
-          
+jobs:
+  Upload:
+    docker:
+     - image: apon77/aosp:cirrus
     steps:
       - run:
             name: "Upload"
