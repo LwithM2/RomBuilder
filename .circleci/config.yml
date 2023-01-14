@@ -2,7 +2,7 @@
 version: 2.1
 
 jobs:
-  build:
+    build:
     docker:
      - image: apon77/aosp:cirrus
     steps:
