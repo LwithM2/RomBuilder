@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Make the Directory if it doesn't exist
-mkdir -p $SYNC_PATH
+mkdir -p ~/project/work
 
 # Change to the Source Directory
-cd $SYNC_PATH
+cd ~/project/work
 
 # Init Repo
 repo init -u $MANIFEST -b $MANIFEST_BRANCH
