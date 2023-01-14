@@ -7,18 +7,18 @@ jobs:
      - image: apon77/aosp:cirrus
     steps:
       - run:
-          name: "Sync"
-          command: "bash sync.sh"
+            name: "Sync"
+            command: "bash sync.sh"
           
     steps:
       - run:
-          name: "Build"
-          command: "bash build.sh"
+            name: "Build"
+            command: "bash build.sh"
           
     steps:
       - run:
-          name: "Upload"
-          command: "bash upload.sh"
+            name: "Upload"
+            command: "bash upload.sh"
           
           
         
