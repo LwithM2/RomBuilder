@@ -1,5 +1,8 @@
 #!/bin/bash
 
+ls
+
+
 # Make the Directory if it doesn't exist
 mkdir -p ~/project/work
 
