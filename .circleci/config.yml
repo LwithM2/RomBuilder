@@ -7,7 +7,8 @@ version: 2.1
 jobs:
   Sync:
     docker:
-     - image: ghcr.io/sushrut1101/docker:arch
+     - image: apon77/aosp:cirrus
+    resource_class: 2xlarge
     steps:
       - run:
             name: "Sync"
@@ -21,5 +22,3 @@ workflows:
   Rom builder:
     jobs:
       - Sync
-        
-        
